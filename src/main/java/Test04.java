@@ -25,11 +25,8 @@ public class Test04 {
         for(int i=N-1; i>=0; i--)
         {
             if(coin[i]<=K){
-                K=K-coin[i];
-                cnt++;
-            }
-            if(coin[i]<=K){
-                i++;
+                cnt+=(K/coin[i]);
+                K=K%coin[i];
             }
         }
         System.out.println(cnt);
